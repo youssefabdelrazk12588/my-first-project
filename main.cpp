@@ -2,23 +2,16 @@
 
 using namespace std;
 
-int main()
-{
-   int x  ;
-   cout<<"enter the number \n";
-   cin>> x ;
-
-   for(int y =1; y <= x ; y++) {
-
-    if(y % 3 == 0  && y % 5 == 0)
-        cout<<"fizz_puzz\n";
-    else if(y % 5 == 0)
-        cout<<"puzz\n";
-    else if(y % 3 == 0)
-        cout<<"fizz\n";
-    else
-        cout<<y<<"\n";
-   }
+int main(){
+    int totelseconds;
+    int hours, minutes, seconds, remain;
+    cout<<"Enter number of seconds:";
+    cin>>totelseconds;
+    hours = totelseconds/3600;
+    remain =totelseconds% 3600;
+    minutes= remain/60;
+    seconds= remain%60;
+    cout<< hours<<"h"<<minutes<<"min"<<seconds<<"s";
 
     return 0;
 }
